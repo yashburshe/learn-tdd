@@ -49,10 +49,12 @@ should be placed in `tests/authorService.test.ts`.
 
 Briefly explain a limitation of the tests in `tests/authorSchema.test.ts` in the space below.
 
-A limitation is that the tests are tightly coupled with the current specific implementation of our model. In the future if we change the internals of our model, we would need to also maintain and change the tests accordingly. We are mocking the internal methods of the models which is why the tests are tightly coupled.
+A limitation is that the tests are tightly coupled with the current specific implementation of our model. In the future if we change the internals of our model like changing the actual Mongoose methods being called, we would need to also maintain and change the tests accordingly. We are mocking the internal methods (Mongoose methods) in the model functions which is why the tests are tightly coupled.
 
 ## Part 3
 
 Generate the coverage report for the tests you wrote. How can you improve
 your tests using the coverage report? Briefly explain your 
 process in the space below.
+
+We can improve the tests to perform better in the coverage report by writing more tests that will check for each condition and possible outcome. To improve the coverage % of our tests we need to make sure that we reach every line of code that could be possibly executed when a particular function is called. We should test for every possible if/else clause. This could be one of the ways to improve our test coverage.
