@@ -49,7 +49,7 @@ should be placed in `tests/authorService.test.ts`.
 
 Briefly explain a limitation of the tests in `tests/authorSchema.test.ts` in the space below.
 
-
+A limitation is that the tests are tightly coupled with the current specific implementation of our model. In the future if we change the internals of our model, we would need to also maintain and change the tests accordingly. We are mocking the internal methods of the models which is why the tests are tightly coupled.
 
 ## Part 3
 
